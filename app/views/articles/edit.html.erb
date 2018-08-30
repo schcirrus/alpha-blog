@@ -4,20 +4,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/stylesheets/alpha.css">
 <body>
+
 <!-- Navigation -->
 <nav class="w3-bar w3-black">
   <%= link_to 'Home', root_path , {:class=> 'w3-button w3-bar-item'}%>
   <%= link_to 'List Articles', articles_path , {:class=> 'w3-button w3-bar-item'}%>
 </nav>
-<br/>
-<%='Create an Article'%><br/>
-
+<h1>Edit existing article</h1>
 <% if @article.errors.any? %>
   <h2>The following errors prevented the article from being created</h2>
   <ul>
     <% @article.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-      <% end %>
+      <li><%= msg %></li>
+    <% end %>
   </ul>
 <% end %>
 

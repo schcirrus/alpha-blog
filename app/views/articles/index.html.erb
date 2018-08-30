@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/stylesheets/alpha.css">
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <%= link_to 'Home', root_path , {:class=> 'w3-button w3-bar-item'}%>
+</nav>
+<h1>Listing of all existing articles</h1>
+<br/>
+<p>
+  <%= link_to 'Create new article', new_article_path %>
+</p>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+  <% @articles.each do |articledata| %>
+    <tr>
+      <td><%=  articledata.title %></td>
+      <td><%=  articledata.description %></td>
+      <td><%= link_to 'Edit', edit_article_path(articledata) %></td>
+      <td><%= link_to 'Show', article_path(articledata) %></td>
+    </tr>
+  <% end %>
+</table>
+</body>
+</html>
