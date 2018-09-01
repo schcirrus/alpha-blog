@@ -4,3 +4,7 @@ This is a comment to test github commit from RubyMine
 
 All article actions completed apart from delete.
 
+Add paritals and destroy action.
+
+Extract redundancy from Articles controller
+
